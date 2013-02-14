@@ -15,7 +15,6 @@ public class Main {
         Main main = new Main();
         main.fi.writeLn("hest");
         System.out.println(main.fi.readFirstLn());
-        
         main.fi.close();
     }
 }
