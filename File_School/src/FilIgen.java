@@ -9,7 +9,6 @@ public class FilIgen {
     
     private DataOutputStream dos;
     private DataInputStream dis;
-    test
 
     public FilIgen(String fileName) {
         
@@ -30,7 +29,11 @@ public class FilIgen {
     }
     
     public String readFirstLn() {
-        return "";
+        try {
+            return dis.readLine();
+        } catch (IOException ex) {
+            return "";
+        }
     }
     
     public String readLn(int line) {
