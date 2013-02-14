@@ -9,6 +9,7 @@ public class FilIgen {
     
     private DataOutputStream dos;
     private DataInputStream dis;
+    test
 
     public FilIgen(String fileName) {
         
