@@ -38,7 +38,7 @@ public class FilIgen {
     
     public void writeLn(String str) {
         try {
-            dos.writeBytes(str);
+            dos.writeUTF(str);
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
@@ -46,7 +46,7 @@ public class FilIgen {
     
     public String readFirstLn() {
         try {
-            return dis.readLine();
+            return dis.readUTF();
         } catch (IOException ex) {
             return "";
         }
