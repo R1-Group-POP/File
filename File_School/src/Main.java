@@ -1,20 +1,41 @@
 
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Patrick
  */
 public class Main {
-    
-    private FilIgen fi;
-    
-    public Main() {
-        fi = new FilIgen("C://Users//Patrick//Desktop//test.txt");
-    }
-    
+
     public static void main(String args[]) {
-        Main main = new Main();
-        main.fi.writeLn("Hesteged");
-        System.out.println(main.fi.readFirstLn());
-        main.fi.close();
+        String filePath = "C://Users//Patrick//Desktop//fil";
+        
+        /**
+         * OUTPUT
+         */
+        try {
+            DataOutputStream out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(filePath)));
+            out.writeInt(22);
+            out.writeInt(200);
+            out.close();
+        } catch (IOException ex) {
+            System.out.println("Output");
+            ex.printStackTrace();
+        }
+
+        /**
+         * INPUT
+         */
+        try {
+            DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(filePath)));
+            System.out.println("" + in.readInt());
+            System.out.println("" + in.readInt());
+            in.close();
+        } catch(IOException ex) {
+            System.out.println("Input");
+            ex.printStackTrace();
+        }
     }
 }
