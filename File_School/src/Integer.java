@@ -5,35 +5,28 @@ import java.io.*;
  *
  * @author Patrick
  */
-public class Main {
+public class Integer {
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
         String filePath = "C://Users//Patrick//Desktop//fil";
         
         /**
          * OUTPUT
          */
-        try {
-            DataOutputStream out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(filePath)));
-            out.writeInt(22);
-            out.writeInt(200);
-            out.close();
-        } catch (IOException ex) {
-            System.out.println("Output");
-            ex.printStackTrace();
+        DataOutputStream out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(filePath)));
+        int i = 1;
+        while(i <= 10) {
+            out.writeInt(i++);
         }
+        out.close();
 
         /**
          * INPUT
          */
-        try {
-            DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(filePath)));
+        DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(filePath)));
+        while(in.available() != 0) {
             System.out.println("" + in.readInt());
-            System.out.println("" + in.readInt());
-            in.close();
-        } catch(IOException ex) {
-            System.out.println("Input");
-            ex.printStackTrace();
         }
+        in.close();
     }
 }
