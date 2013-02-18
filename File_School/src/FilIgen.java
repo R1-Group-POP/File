@@ -1,4 +1,6 @@
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
@@ -23,44 +25,29 @@ public class FilIgen {
     
     private DataOutputStream dos;
     private DataInputStream dis;
+    
+    private BufferedWriter bw;
+    private BufferedReader br;
 
     public FilIgen(String filePath) {
-        try {
-            fos = new FileOutputStream(filePath);
-            fis = new FileInputStream(filePath);
-        } catch (FileNotFoundException ex) {
-            System.out.println(ex.getMessage());
-        } finally {
-            dos = new DataOutputStream(fos);
-            dis = new DataInputStream(fis);
-        }
+        fos = new FileOutputStream(filePath);
+        fis = new FileInputStream(filePath);
+        
+        dos = new DataOutputStream(fos);
+        dis = new DataInputStream(fis);
+        
+        bw = new BufferedWriter(dos);
     }
     
     public void writeLn(String str) {
-        try {
-            dos.writeUTF(str);
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
+        
     }
     
     public String readFirstLn() {
-        try {
-            return dis.readUTF();
-        } catch (IOException ex) {
-            return "";
-        }
+        
     }
     
     public void close() {
-        try {
-            dis.close();
-            dos.close();
-            
-            fis.close();
-            fos.close();
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
+        
     }
 }
