@@ -5,10 +5,10 @@ import java.io.*;
  *
  * @author Patrick
  */
-public class Integer {
+public class IntegerExample {
 
     public static void main(String args[]) throws IOException {
-        String filePath = "C://Users//Patrick//Desktop//fil";
+        String filePath = "C://Users//Patrick//Desktop//intfil";
         
         /**
          * OUTPUT
