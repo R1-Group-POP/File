@@ -10,7 +10,7 @@ import java.io.IOException;
  *
  * @author Patrick
  */
-public class StringExample {
+public class StringExample{
 
     public static void main(String[] args) throws IOException{
         String filePath = "C://Users//Patrick//Desktop//stringfil.txt";
@@ -28,8 +28,10 @@ public class StringExample {
          * Input
          */
         BufferedReader in = new BufferedReader(new FileReader(filePath));
-        System.out.println(in.readLine());
-        System.out.println(in.readLine());
+        String line;
+        while((line = in.readLine()) != null) {
+            System.out.println(line);
+        }
         in.close();
         
     }

@@ -5,7 +5,7 @@ import java.io.*;
  *
  * @author Patrick
  */
-public class IntegerExample {
+public class IntegerExample{
 
     public static void main(String args[]) throws IOException {
         String filePath = "C://Users//Patrick//Desktop//intfil";
