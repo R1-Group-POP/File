@@ -8,7 +8,7 @@ import java.io.*;
 public class IntegerExample{
 
     public static void main(String args[]) throws IOException {
-        String filePath = "C://Users//Patrick//Desktop//intfil";
+        String filePath = "intfil";
         
         /**
          * OUTPUT

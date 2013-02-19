@@ -13,7 +13,7 @@ import java.io.IOException;
 public class StringExample{
 
     public static void main(String[] args) throws IOException{
-        String filePath = "C://Users//Patrick//Desktop//stringfil.txt";
+        String filePath = "stringfil.txt";
         
         /**
          * Output

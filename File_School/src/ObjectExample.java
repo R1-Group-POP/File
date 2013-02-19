@@ -6,7 +6,7 @@ import java.io.*;
 public class ObjectExample {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException{
-        String filePath = "C://Users//Patrick//Desktop//objectfil";
+        String filePath = "objectfil";
         Person p1 = new Person("2104892119", "Patrick Kann");
         Person p2 = new Person("5345345345", "Oliver Korfitsen");
         
